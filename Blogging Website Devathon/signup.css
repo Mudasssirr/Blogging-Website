@@ -1,0 +1,55 @@
+body {
+    font-family: 'Nunito';
+}
+
+.logo {
+    color: #000;
+    margin-top: 8px;
+    font-family: 'Dancing Script' !important;
+    text-align: center;
+}
+
+.web-logo {
+    font-size: 25px;
+}
+
+.signup-form {
+    margin-top: 70px;
+    width: 50%;
+}
+
+.form-text {
+    font-size: 14px !important;
+}
+
+#passwordCheckbox {
+    margin-left: 5px;
+}
+
+.showPassword-label {
+    margin-left: 2px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#loader {
+    position: absolute;
+    display: none;
+    width: 100%;
+    justify-content: center;
+    margin-left: -13px;
+    margin-top: 3px;
+}
+
+@media only screen and (max-width: 991px) {
+    .signup-form {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .signup-form {
+        width: 90%;
+        padding: 0px;
+    }
+}

@@ -1,0 +1,77 @@
+.feed {
+    overflow-x: hidden;
+}
+
+.main-heading {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.contact-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.contributers-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.card {
+    transition: box-shadow .3s ease !important;
+}
+
+.inner-card {
+    width: 18rem !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+
+.card-title {
+    text-align: center !important;
+}
+
+.card-text {
+    text-align: center !important;
+    color: gray !important;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: space-evenly;
+    opacity: 0;
+    transform: translateY(70%);
+    transition: transform .2s ease, opacity .2s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 50px #23232333 !important;
+}
+
+.card:hover .contact-icons {
+    transform: translateY(1%);
+    opacity: 1;
+}
+
+.bi-linkedin,
+.bi-github {
+    font-size: 24px;
+}
+
+@media only screen and (max-width: 940px) {
+    .contact-icons {
+        opacity: 1;
+        transition: none;
+        transform: translateY(0%);
+    }
+}

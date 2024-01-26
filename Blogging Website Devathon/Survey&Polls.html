@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Images/URL-LOGO.jpg">
+    <title>Surveys & Polls</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+    </link>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing Script">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Survey&Polls.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-toggler-icon-res">
+            <div class="icon"><i class="fa-solid fa-bars hamburger-icon"></i></div>
+        </div>
+        <div class="navbar-logo">
+            <h5 class="nav-logo">Write Wise</h5>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search..." class="search-input" id="searchInput">
+            <button class="search-btn" id="searchBtn">Search</button>
+        </div>
+        <div class="nav-links">
+            <div class="close-icon-navbar">
+                <i class="bi bi-x cross-icon"></i>
+            </div>
+            <ul>
+                <div class="menu-heading">
+                    <h3>MENU</h3>
+                </div>
+                <li class="navlink1"><a href="index.html">Blogs</a></li>
+                <li class="navlink2"><a href="about.html">About</a></li>
+                <li class="navlink3"><a href="contact.html">Contact</a></li>
+                <li class="navlink4"><a href="FAQs.html">FAQs</a></li>
+                <li class="navlink5"><a href="feedback.html">Feedback</a></li>
+                <li class="navlink6"><a href="trendingBlogs.html">Trending Blogs</a></li>
+                <li class="navlink7"><a href="Categories.html">Categories</a></li>
+                <li class="navlink8" id="survey&Polls-res-link"><a href="Survey&Polls.html">Surveys & Polls</a></li>
+                <li class="navlink9" id="archive-res-link"><a href="archive.html">Archives</a></li>
+            </ul>
+        </div>
+        <div class="res-nav-tabs">
+            <ul class="res-nav-links">
+                <li><a href="index.html">Blogs</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="FAQs.html">FAQs</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </div>
+        <div class="navbar-actions">
+            <div class="search-icon"><i class="bi bi-search"></i></div>
+            <a href="login.html"><button class="login-btn" id="login-btn">Login</button></a>
+            <a><button class="login-btn" id="signout-btn">Signout</button></a>
+            <a href="signup.html"><button class="signup-btn" id="signup-btn">Signup</button></a>
+            <a href="profile.html">
+                <div class="user-img-container" id="user-img-container">
+                    <img src="Images/default-profile-img.png" alt="" class="user-navbar-img" id="user-navbar-img">
+                </div>
+            </a>
+        </div>
+    </nav>
+    <div class="body">
+        <div class="main-page">
+            <div class="sidebar-menu">
+                <ul class="sidebar-menu-list">
+                    <li class="sidebar-menu-items" id="trending-link">
+                        <i class="bi bi-fire sidebar-menu-icons"></i>
+                        <a href="trendingBlogs.html" class="sidebar-txt">Trending Blogs</a>
+                    </li>
+                    <li class="sidebar-menu-items" id="categories-link">
+                        <i class="bi bi-tag-fill sidebar-menu-icons"></i>
+                        <a href="Categories.html" class="sidebar-txt">Categories</a>
+                    </li>
+                    <li class="sidebar-menu-items" id="survey-link">
+                        <i class="bi bi-list-columns-reverse sidebar-menu-icons"></i>
+                        <a href="Survey&Polls.html" class="sidebar-txt">Surveys & Polls</a>
+                    </li>
+                    <li class="sidebar-menu-items" id="archive-link">
+                        <i class="bi bi-archive-fill sidebar-menu-icons"></i>
+                        <a href="archive.html" class="sidebar-txt">Archives</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="feed" id="feed">
+                <div id="snackbar" class="snackbar"></div>
+
+                <div class="search-questionare-container">
+                    <input type="text" class="search-input" placeholder="Search Survey / Polls" id="search-questionare-input">
+                    <button class="search-btn" id="search-questionare-btn">Search</button>
+                </div>
+
+                <div class="dashboard-heading-container">
+                    <h4 class="dashboard-heading">Surveys & Polls</h4>
+                </div>
+
+                <div class="report-modal">
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Report Blog</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="mb-0">
+                                        <label for="recipient-email" class="col-form-label">Your Email:</label>
+                                        <input type="text" class="form-control" id="recipient-email"
+                                            placeholder="Email">
+                                        <p class="report-error" id="report-email"></p>
+                                    </div>
+                                    <div class="mb-0">
+                                        <div id="report-radio-btns">
+                                            <label for="message-text" class="col-form-label">Reason for
+                                                reporting:</label>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="reportReason"
+                                                    id="radioSpam" value="spam">
+                                                <label class="form-check-label" for="radioSpam">
+                                                    Spam
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="reportReason"
+                                                    id="radioInappropriate" value="inappropriateContent">
+                                                <label class="form-check-label" for="radioInappropriate">
+                                                    Inappropriate content
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="reportReason"
+                                                    id="radioHateSpeech" value="hateSpeech">
+                                                <label class="form-check-label" for="radioHateSpeech">
+                                                    Hate speech or bullying
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="reportReason"
+                                                    id="radioPlagiarism" value="plagiarism">
+                                                <label class="form-check-label" for="radioPlagiarism">
+                                                    Plagiarism
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="reportReason"
+                                                    id="radioFalseInformation" value="falseInformation">
+                                                <label class="form-check-label" for="radioFalseInformation">
+                                                    False Information
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="reportReason"
+                                                    id="radioSomethingElse" value="somethingElse">
+                                                <label class="form-check-label" for="radioSomethingElse">
+                                                    Something else
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <p class="report-error" id="report-checkbox"></p>
+                                        <div class="mb-0" id="somethingElseReason" style="display: none;">
+                                            <label for="reason-textarea" class="col-form-label">Please specify:</label>
+                                            <textarea class="form-control" id="reason-textarea"
+                                                placeholder="Enter details"></textarea>
+                                            <p class="report-error" id="report-reason-textearea"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <div id="report-blog-loader">
+                                        <div class="spinner-border text-light" role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-danger" id="report-blog-btn">Report</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="create-actions" id="create-actions">
+                    <button class="create-polls-btn" id="create-polls-btn"><i
+                            class="bi bi-plus bi-plus-polls"></i>Create Poll</button>
+                    <button class="create-surveys-btn" id="create-surveys-btn"><i
+                            class="bi bi-plus bi-plus-surveys"></i>Create Survey</button>
+                </div>
+
+                <!-- FOR EDITING A QUESTIONARE  -->
+
+                <div class="edit-questionare" id="edit-questionare">
+                    <div class="card mt-3 mb-2">
+                        <div class="row g-0">
+                            <h4 class="edit-questionare-heading">Edit Questionare</h4>
+                            <div class="card-body">
+                                <div class="mt-3">
+                                    <p class="card-text">Question:</p>
+                                    <input type="text" class="form-control mb-2" placeholder="Question"
+                                        id="edit-question">
+                                    <p class="edit-validation-error" id="edit-question-error"></p>
+                                </div>
+                                <div class="mt-3">
+                                    <p class="card-text">Options:</p>
+                                    <input type="text" class="form-control mb-2" placeholder="Option 1"
+                                        id="edit-option1">
+                                    <p class="edit-validation-error" id="edit-option1-error"></p>
+                                    <input type="text" class="form-control mb-2" placeholder="Option 2"
+                                        id="edit-option2">
+                                    <p class="edit-validation-error" id="edit-option2-error"></p>
+                                    <input type="text" class="form-control mb-2" placeholder="Option 3"
+                                        id="edit-option3">
+                                    <p class="edit-validation-error" id="edit-option3-error"></p>
+                                    <input type="text" class="form-control mb-2" placeholder="Option 4"
+                                        id="edit-option4">
+                                    <p class="edit-validation-error" id="edit-option4-error"></p>
+                                </div>
+                                <div class="mt-2 edit-questionare-actions">
+                                    <div id="edit-questionare-loader">
+                                        <div class="spinner-border text-light" role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                        </div>
+                                    </div>
+                                    <button class="edit-questionare-btn" id="edit-questionare-btn">Update</button>
+                                    <button class="cancel-questionare-btn" id="cancel-questionare-btn">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CREATING A POLL -->
+
+                <div class="create-poll" id="create-poll">
+                    <div class="card mt-3 mb-2">
+                        <div class="row g-0">
+                            <h4 class="create-poll-heading">Create Poll</h4>
+                            <div class="card-body">
+                                <div class="mt-3">
+                                    <p class="card-text">Question:</p>
+                                    <input type="text" class="form-control mb-2" placeholder="Question"
+                                        id="poll-question">
+                                    <p class="poll-validation-error" id="poll-question-error"></p>
+                                </div>
+                                <div class="mt-3">
+                                    <p class="card-text">Options:</p>
+                                    <input type="text" class="form-control mb-2" placeholder="Option 1"
+                                        id="poll-option1">
+                                    <p class="poll-validation-error" id="poll-option1-error"></p>
+                                    <input type="text" class="form-control mb-2" placeholder="Option 2"
+                                        id="poll-option2">
+                                    <p class="poll-validation-error" id="poll-option2-error"></p>
+                                    <input type="text" class="form-control mb-2" placeholder="Option 3"
+                                        id="poll-option3">
+                                    <p class="poll-validation-error" id="poll-option3-error"></p>
+                                    <input type="text" class="form-control mb-2" placeholder="Option 4"
+                                        id="poll-option4">
+                                    <p class="poll-validation-error" id="poll-option4-error"></p>
+                                </div>
+                                <div class="mt-2 create-poll-actions">
+                                    <div id="create-poll-loader">
+                                        <div class="spinner-border text-light" role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                        </div>
+                                    </div>
+                                    <button class="create-poll-btn" id="create-poll-btn">Create</button>
+                                    <button class="cancel-poll-btn" id="cancel-poll-card">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CREATING A SURVEY -->
+                <div class="create-survey" id="create-survey">
+                    <div class="card mt-3 mb-2">
+                        <div class="row g-0">
+                            <h4 class="create-survey-heading">Create Survey</h4>
+                            <div class="card-body">
+                                <div class="mt-3">
+                                    <p class="card-text">Question:</p>
+                                    <input type="text" class="form-control mb-2" placeholder="Question"
+                                        id="survey-question">
+                                    <p class="survey-validation-error" id="survey-question-error"></p>
+                                </div>
+                                <div class="mt-3">
+                                    <p class="card-text">Options:</p>
+                                    <input type="text" class="form-control mb-2" placeholder="Option 1"
+                                        id="survey-option1">
+                                    <p class="survey-validation-error" id="survey-option1-error"></p>
+                                    <input type="text" class="form-control mb-2" placeholder="Option 2"
+                                        id="survey-option2">
+                                    <p class="survey-validation-error" id="survey-option2-error"></p>
+                                    <input type="text" class="form-control mb-2" placeholder="Option 3"
+                                        id="survey-option3">
+                                    <p class="survey-validation-error" id="survey-option3-error"></p>
+                                    <input type="text" class="form-control mb-2" placeholder="Option 4"
+                                        id="survey-option4">
+                                    <p class="survey-validation-error" id="survey-option4-error"></p>
+                                </div>
+                                <div class="mt-2 create-survey-actions">
+                                    <div id="create-survey-loader">
+                                        <div class="spinner-border text-light" role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                        </div>
+                                    </div>
+                                    <button class="create-survey-btn" id="create-survey-btn">Create</button>
+                                    <button class="cancel-survey-btn cancel-action-card"
+                                        id="cancel-survey-card">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <!-- RENDETING CARDS -->
+
+                <div id="delete-questionare-loader">
+                    <div class="spinner-border text-primary blog-innner-loader" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+
+                <div id="search-surveyNpolls"></div>
+
+                <div id="surveysNpolls">
+                    <div id="blog-loader">
+                        <div class="spinner-border text-primary blog-innner-loader" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="blog-pagination" class="mt-4 mb-0">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                        </ul>
+                    </nav>
+                </div>
+
+                <footer>
+                    <div class="row">
+                        <div class="col">
+                            <p class="footer-heading">ABOUT</p>
+                            <ul class="footer-list">
+                                <a href="">
+                                    <li>About Us</li>
+                                </a>
+                                <a href="">
+                                    <li>Contact Us</li>
+                                </a>
+                                <a href="">
+                                    <li>FAQs</li>
+                                </a>
+                                <a href="">
+                                    <li>Legal Information</li>
+                                </a>
+                                <a href="">
+                                    <li>Social Media Links</li>
+                                </a>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <p class="footer-heading">HELP</p>
+                            <ul class="footer-list">
+                                <a href="">
+                                    <li>Feedback</li>
+                                </a>
+                                <a href="">
+                                    <li>Copyright Information</li>
+                                </a>
+                                <a href="">
+                                    <li>Support or Help Center</li>
+                                </a>
+                                <a href="">
+                                    <li>Community Guidlines</li>
+                                </a>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <p class="footer-heading">TERMS & SERVICES</p>
+                            <ul class="footer-list">
+                                <a href="">
+                                    <li>Terms & Conditions</li>
+                                </a>
+                                <a href="">
+                                    <li>Privacy Policy</li>
+                                </a>
+                                <a href="">
+                                    <li>Cookie Policy</li>
+                                </a>
+                                <a href="">
+                                    <li>Help Us Improve</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </footer>
+                <div class="copyright">
+                    <p> <span class="footer-logo"> Write Wise.</span> All rights reserved &copy; 2023 </p>
+                </div>
+                <div class="credit">
+                    <p class="made-by">Made with <i class="fa-solid fa-heart"></i> by <a
+                            href="https://www.linkedin.com/in/muhammad-mudassir-awan-b98147284" target="_blank">Mudassir
+                            Awan</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="navbar.js"></script>
+<script type="module" src="authentication.js"></script>
+<script type="module" src="sidebarLinks.js"></script>
+<script type="module" src="search.js"></script>
+<script type="module" src="Survey&Polls.js"></script>
+<script type="module" src="Survey&PollCreate.js"></script>
+<script type="module" src="Survey&PollSearch.js"></script>
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script src="https://mediafiles.botpress.cloud/da775a60-cb19-4e8d-9b1f-104388577147/webchat/config.js" defer></script>
+</html>

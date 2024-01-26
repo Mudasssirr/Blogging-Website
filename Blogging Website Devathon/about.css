@@ -1,0 +1,42 @@
+.feed {
+    overflow-x: hidden;
+}
+
+.main-about-heading {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.content-container {
+    width: 100%;
+    margin-left: 10px;
+}
+
+.reach-links {
+    text-decoration: none;
+}
+
+.reach-links:hover {
+    text-decoration: underline;
+}
+
+.Social-Links {
+    font-weight: 500;
+}
+
+.content-heading {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.content-subHeading {
+    font-weight: 600;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.content-paragraph {
+    font-size: 15px;
+    margin-right: 10px;
+}
